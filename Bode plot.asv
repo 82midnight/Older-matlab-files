@@ -1,0 +1,16 @@
+%Problem 1
+num=[10 0];
+den=[1 10];
+bode(num,den)
+
+% Problem 2
+num=[100 ];
+den=[1 100];
+bode(num,den)
+
+%third problem for damping ratio 1
+D=1; 
+A=D*20;
+num=[1];
+den=[1 A 100];
+bode(num,den)

@@ -1,0 +1,10 @@
+%Interpolation Program
+I=
+LI=.99;
+HI=5;
+LO=0;
+HO=2;
+if I<HI & I>LI;
+O=(((I-LI)*(HO-LO))/(HI-LI))+LO
+else
+    

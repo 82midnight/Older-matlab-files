@@ -1,0 +1,42 @@
+%heat transfer Project Pin BM
+l=0.03;  %(m)
+k=237;   %(W/m-k)
+h=35;    %(W/m^2-k)
+Tb=100;  %(C)
+Ts=30;   %(C)
+n=1
+
+%d=0.0025
+%for s=0:0.00000001:0.00001;
+
+s=0.001 %spacing (m)
+for d=0:0.00001:0.01
+p=pi*d;
+A=(pi/4)*(d.^2);
+lc=l+(d/4);
+m=sqrt((h*p)/(k*A));
+E=(tanh(m*l))/(m*l);
+
+N=(1/((d+s)*(d+s)));
+%N=1/((s)*(s))
+Afin=N*(pi*d*lc);
+Aunf=1-N*A;
+Qfin=E*h*Afin*(Tb-Ts);
+Qunf=h*Aunf*(Tb-Ts);
+Qtotal=Qfin+Qunf;
+Qwofin=h*1*(Tb-Ts);
+ETotal=Qtotal/Qwofin;
+%if ETotal>=21.42
+    %break
+%end
+plot(d,ETotal,'r:')
+%plot(s,ETotal)
+grid on
+hold on
+xlabel('diameter')
+ylabel('overall effectiveness')
+Y(n)=ETotal;
+n=n+1;
+    end
+   max(Y)
+   

@@ -1,0 +1,9 @@
+% Problem1 HW#4 by BM
+t=0:0.01:20;
+y=exp(-2*t).*[0.2*sin(t)+(0.4)*sin(t)];
+plot(t,y)
+
+% Problem2 HW#4 by BM
+t=0:0.01:20;
+y=exp(-2*t).*[0.2*sin(t)+(0.4)*sin(t)];
+plot(t,y)

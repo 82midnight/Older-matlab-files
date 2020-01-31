@@ -1,0 +1,21 @@
+%Bernard Mulcahy 11227090 Lab 3 Exercise 1
+C=.5
+S=sqrt(3)/2
+
+%run function files to obtain element matrix
+K1=[C^2 C*S -C^2 -C*S:]
+
+
+%position element matrix to obtain global matrix K
+K=[K1(1,1) K1(1,2) 0 0;K1(2,1) (K1(2,2)+K2(1,1)) K2(1,2) 0; 0 K2(2,1) (K2(2,2)+K3(1,1)) K3(1,2); 0 0 K3(2,1) K3(2,2)]
+%setup for boundary condition part (b)
+Kb=[1 0 0 0; K1(2,1) (K1(2,2)+K2(1,1)) K2(1,2) 0; 0 K2(2,1) (K2(2,2)+K3(1,1)) K3(1,2);0 0 0 1]
+F=[0 3000 0 0]' %input forces
+
+%solve for nodal displacement
+d=Kb\F  
+%part (c)
+GNF=K*d %solve for global nodal displacement 
+
+
+

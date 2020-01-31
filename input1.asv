@@ -1,0 +1,16 @@
+%Input Chatter bump displacment
+t=0:.01:2.85;
+w=0:.001:.28;
+u1=.05+0.05*sin(((300)*w)-(pi/2));
+u2=zeros(size(u1));
+u=[u1 u2];
+plot(t,u)
+
+
+%Input Chatter bump displacment
+%t=0:.01:30.31;
+%w=0:.01:(5*pi-.55);
+%u1=.05+0.05*sin((1.25)*w-(pi/2));
+%u2=zeros(size(u1));
+%u=[u1 u2];
+%plot(t,u)

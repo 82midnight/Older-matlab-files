@@ -1,0 +1,12 @@
+%Input ride swell
+
+t=0:.1:20;
+w=0:.1:3.1415;
+u1=0*ones(1,1);
+u2=0.6*sin(w);
+u3=0*ones(1,75);
+u4=.025*ones(1,1);
+u5=0*ones(1,75);
+
+u=[u1 u2 u3 u4 u5];
+plot(u,t)

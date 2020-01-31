@@ -1,0 +1,12 @@
+function [I] = HW12P3(a,b,E,N)
+%BM 4/25/2011 Homework12 Problem 3 
+%   Equation to govern 
+
+v=a:E:b;
+I =@(v)1e-6.*exp(v/0.05) +v-1.9
+plot(v,I(v))
+end
+
+% zero exists at 0.6999
+
+
